@@ -5,7 +5,6 @@ require_once "../src/funcoes-fabricantes.php";
 /* Guardando o retorno/resultado da função lerFabricantes */
 $listaDeFabricantes = lerFabricantes($conexao);
 ?>
-<pre><?=var_dump($listaDeFabricantes)?></pre>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
