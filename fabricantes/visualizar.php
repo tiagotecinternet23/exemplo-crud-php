@@ -6,9 +6,12 @@
     <title>Fabricantes - Visualização</title>
 </head>
 <body>
-    <h1>Fabricantes | SELECT</h1>
+    <h1>Fabricantes | SELECT - 
+        <a href="../index.php">Home</a>
+    </h1>
+    
     <hr>
     <h2>Lendo e carregando todos os fabricantes.</h2>
-    
+
 </body>
 </html>
