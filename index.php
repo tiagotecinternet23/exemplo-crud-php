@@ -11,7 +11,6 @@
     <p>Operações de <b>inserção</b>, <b>leitura</b>, <b>atualização</b> e <b>exclusão</b> de dados.</p>
     <hr>
     <h2>Escolha o que deseja gerenciar:</h2>
-
     <ul>
         <li><a href="">Fabricantes</a></li>
         <li><a href="">Produtos</a></li>
