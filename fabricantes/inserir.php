@@ -1,6 +1,8 @@
 <?php
 /* Verificando se o formulário/botão foi acionado */
 if( isset($_POST['inserir']) ){
+    // Importando as funções e conexão
+    require_once "../src/funcoes-fabricantes.php";
     
     // Capturando o valor digitado do nome e sanitizando
     $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -8,7 +10,7 @@ if( isset($_POST['inserir']) ){
     // Pode ser assim também:
     // $nome = filter_var($_POST['nome'], FILTER_SANITIZE_SPECIAL_CHARS);
 
-    echo $nome; // teste
+    inserirFabricante($conexao, $nome);
 }
 ?>
 <!DOCTYPE html>
