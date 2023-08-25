@@ -56,9 +56,13 @@ function lerUmFabricante(PDO $conexao, int $idFabricante){
     $sql = "SELECT * FROM fabricantes WHERE id = :id";
 
     try {
-        /* O que fazer aqui dentro? Pense e tente resolver! */
-        
+        $consulta = $conexao->prepare($sql);
+        $consulta->bindValue(":id", $idFabricante, PDO::PARAM_INT);
+        $consulta->execute();
+        $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
     } catch (Exception $erro) {
         die("Erro ao carregar: ".$erro->getMessage());
     }
+
+    return $resultado;
 } // fim lerUmFabricante
