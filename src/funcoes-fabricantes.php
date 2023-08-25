@@ -66,3 +66,8 @@ function lerUmFabricante(PDO $conexao, int $idFabricante){
 
     return $resultado;
 } // fim lerUmFabricante
+
+/* Exercício: IMPLEMENTE A FUNÇÃO ABAIXO */
+function atualizarFabricante(){
+
+}
