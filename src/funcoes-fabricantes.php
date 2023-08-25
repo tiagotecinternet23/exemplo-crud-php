@@ -50,3 +50,15 @@ function inserirFabricante(PDO $conexao, string $nomeDoFabricante){
 
 } // fim inserirFabricante
 
+
+// Usada em fabricantes/atualizar.php
+function lerUmFabricante(PDO $conexao, int $idFabricante){
+    $sql = "SELECT * FROM fabricantes WHERE id = :id";
+
+    try {
+        /* O que fazer aqui dentro? Pense e tente resolver! */
+        
+    } catch (Exception $erro) {
+        die("Erro ao carregar: ".$erro->getMessage());
+    }
+} // fim lerUmFabricante
