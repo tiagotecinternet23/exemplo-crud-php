@@ -82,7 +82,7 @@ function atualizarFabricante(PDO $conexao, string $nome, int $id){
 } // fim atualizarFabricantes
 
 // Usada em fabricantes/excluir.php
-function excluirFabricantes(PDO $conexao, int $id) {
+function excluirFabricante(PDO $conexao, int $id) {
     $sql = "DELETE FROM fabricantes WHERE id = :id";
     try {
         $consulta = $conexao->prepare($sql);
