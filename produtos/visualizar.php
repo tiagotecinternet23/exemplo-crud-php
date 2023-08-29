@@ -60,6 +60,11 @@ $listaDeProdutos = lerProdutos($conexao);
             <!-- 2) Fazer a conta direto na query SQL e pegar
             o resultado (coluna total) - além de passar pra formatação -->
             <p><b>Total:</b> <?=formatarPreco($produto["total"])?>  </p>
+            
+            <!-- 3) Fazer uma função de cálculo e pegar o 
+            resultado dela já calculado e formatado -->
+            <p><b>Total:</b> 
+            <?=calcularTotal($produto["preco"], $produto["quantidade"])?></p>
         </article>
     <?php } ?>
 
