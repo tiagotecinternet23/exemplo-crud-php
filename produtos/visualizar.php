@@ -49,6 +49,13 @@ $listaDeProdutos = lerProdutos($conexao);
             <h4> <?=$produto["fabricante"]?> </h4>
             <p><b>Preço:</b> <?=formatarPreco($produto["preco"])?> </p>
             <p><b>Quantidade:</b> <?=$produto["quantidade"]?> </p>
+            <p><b>Total:</b> 
+
+            <!-- Soluções possíveis para o Exercício/Desafio 2 -->
+
+            <!-- 1) fazer a conta diretamente e passar o resultado
+            pra formatação do preço -->
+            <?= formatarPreco($produto["preco"] * $produto["quantidade"]) ?> </p>
         </article>
     <?php } ?>
 
