@@ -11,7 +11,8 @@ function lerProdutos(PDO $conexao):array {
                 produtos.nome AS produto,
                 produtos.preco,
                 produtos.quantidade,
-                fabricantes.nome AS fabricante
+                fabricantes.nome AS fabricante,
+                (produtos.preco * produtos.quantidade) AS total
             FROM produtos INNER JOIN fabricantes
             ON produtos.fabricante_id = fabricantes.id
             ORDER BY produto";

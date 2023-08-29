@@ -49,13 +49,17 @@ $listaDeProdutos = lerProdutos($conexao);
             <h4> <?=$produto["fabricante"]?> </h4>
             <p><b>Preço:</b> <?=formatarPreco($produto["preco"])?> </p>
             <p><b>Quantidade:</b> <?=$produto["quantidade"]?> </p>
-            <p><b>Total:</b> 
-
+            
             <!-- Soluções possíveis para o Exercício/Desafio 2 -->
-
-            <!-- 1) fazer a conta diretamente e passar o resultado
+            
+            <p><b>Total:</b> 
+            <!-- 1) Fazer a conta diretamente e passar o resultado
             pra formatação do preço -->
             <?= formatarPreco($produto["preco"] * $produto["quantidade"]) ?> </p>
+
+            <!-- 2) Fazer a conta direto na query SQL e pegar
+            o resultado (coluna total) - além de passar pra formatação -->
+            <p><b>Total:</b> <?=formatarPreco($produto["total"])?>  </p>
         </article>
     <?php } ?>
 
