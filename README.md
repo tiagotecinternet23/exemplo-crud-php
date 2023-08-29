@@ -4,6 +4,10 @@
 
 ### 29/08/2023
 
+#### Exercício/Desafio 03
+
+- Em `produtos/inserir.php` programe as ações necessárias para fazer com que o `select` e `option` de **Fabricantes** mostre todos os fabricantes disponíveis para escolha.
+
 #### Exercício/Desafio 02
 
 - Pense (e implemente) uma forma de trazer na página **produtos/visualizar.php** o total de cada produto, ou seja, multiplicando `preco` por `quantidade`.
