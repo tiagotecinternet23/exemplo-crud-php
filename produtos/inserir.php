@@ -30,7 +30,7 @@ $listaDeFabricantes = lerFabricantes($conexao);
         </p>
         <p>
             <label for="fabricante">Fabricante:</label>
-            <select name="fabricante" id="fabricante">
+            <select name="fabricante" id="fabricante" required>
                 <option value=""></option>
                 
                 <?php foreach($listaDeFabricantes as $fabricante) { ?>
