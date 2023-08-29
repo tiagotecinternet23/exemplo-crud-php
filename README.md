@@ -6,7 +6,7 @@
 
 #### Exercício/Desafio 02
 
-- Pense uma forma de trazer na página **produtos/visualizar.php** o total de cada produto, ou seja, multiplicando `preco` por `quantidade`.
+- Pense (e implemente) uma forma de trazer na página **produtos/visualizar.php** o total de cada produto, ou seja, multiplicando `preco` por `quantidade`.
 
 - **Dicas:** dá pra fazer de forma direta na saída, ou via operações no comando SQL, ou usando uma nova função etc.
 
