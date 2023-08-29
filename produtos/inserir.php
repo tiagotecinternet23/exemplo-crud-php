@@ -1,3 +1,7 @@
+<?php
+require_once "../src/funcoes-fabricantes.php";
+$listaDeFabricantes = lerFabricantes($conexao);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +32,13 @@
             <label for="fabricante">Fabricante:</label>
             <select name="fabricante" id="fabricante">
                 <option value=""></option>
+                
+                <?php foreach($listaDeFabricantes as $fabricante) { ?>
+                <option value="<?=$fabricante['id']?>"> 
+                    <?=$fabricante['nome']?> 
+                </option>
+                <?php } ?>
+
             </select>
         </p>
         <p>
