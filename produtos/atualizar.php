@@ -17,16 +17,18 @@ $produto = lerUmProduto($conexao, $id);
     <form action="" method="post">
         <p>
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" required>
+            <input value="<?=$produto['nome']?>" type="text" name="nome" id="nome" required>
         </p>
         <p>
             <label for="preco">Preço:</label>
-            <input type="number" min="10" max="10000" step="0.01"
+            <input value="<?=$produto['preco']?>"
+            type="number" min="10" max="10000" step="0.01"
              name="preco" id="preco" required>
         </p>
         <p>
             <label for="quantidade">Quantidade:</label>
-            <input type="number" min="1" max="100"
+            <input value="<?=$produto['quantidade']?>"
+            type="number" min="1" max="100"
              name="quantidade" id="quantidade" required>
         </p>
         <p>
@@ -38,7 +40,7 @@ $produto = lerUmProduto($conexao, $id);
         </p>
         <p>
             <label for="descricao">Descrição:</label> <br>
-            <textarea name="descricao" id="descricao" cols="30" rows="3"></textarea>
+            <textarea name="descricao" id="descricao" cols="30" rows="3"><?=$produto['descricao']?></textarea>
         </p>
         <button type="submit" name="atualizar">Atualizar produto</button>
     </form>
