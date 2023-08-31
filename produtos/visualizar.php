@@ -69,12 +69,14 @@ $listaDeProdutos = lerProdutos($conexao);
             <hr>
             <p>
 <a href="atualizar.php?id=<?=$produto["id"]?>">Editar</a> | 
-<a href="excluir.php?id=<?=$produto["id"]?>">Excluir</a>
+<a class="excluir" href="excluir.php?id=<?=$produto["id"]?>">Excluir</a>
             </p>
         </article>
     <?php } ?>
 
     </div>
+
+    <script src="../js/confirma-exclusao.js"></script>
 
 </body>
 </html>
