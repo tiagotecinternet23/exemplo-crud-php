@@ -74,3 +74,16 @@ function lerUmProduto(PDO $conexao, int $id):array {
     }    
     return $resultado;
 }
+
+
+function atualizarProduto(
+    PDO $conexao, 
+    int $id, 
+    string $nome, 
+    float $preco, 
+    int $quantidade, 
+    string $descricao, 
+    int $fabricanteId
+):void {
+    
+}
