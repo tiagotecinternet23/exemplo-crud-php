@@ -2,10 +2,6 @@
 require_once "conecta.php";
 
 function lerProdutos(PDO $conexao):array {
-    // Versão 1 (dados somente da tabela produtos)
-    // $sql = "SELECT nome, preco, quantidade FROM produtos ORDER BY nome";
-    
-    // Versão 2 (dados das duas tabelas: produtos e fabricantes)
     $sql = "SELECT 
                 produtos.id,
                 produtos.nome AS produto,
@@ -43,18 +39,10 @@ function inserirProduto(
     try {
         $consulta = $conexao->prepare($sql);
         $consulta->bindValue(":nome", $nome, PDO::PARAM_STR);
-
-        /* No PDO, ao trabalhar com valores "quebrados" para
-        os parâmetros nomeados, você deve usar a constante
-        PARAM_STR. No momento, não há outra forma no PDO de lidar
-        com valores deste tipo devido aos diferentes tipos de
-        dados que cada Banco de Dados suporta. */
         $consulta->bindValue(":preco", $preco, PDO::PARAM_STR);
-        
         $consulta->bindValue(":quantidade", $quantidade, PDO::PARAM_INT);
         $consulta->bindValue(":descricao", $descricao, PDO::PARAM_STR);
         $consulta->bindValue(":fabricanteId", $fabricanteId, PDO::PARAM_INT);
-        
         $consulta->execute();
     } catch (Exception $erro) {
         die("Erro ao inserir: ".$erro->getMessage());
